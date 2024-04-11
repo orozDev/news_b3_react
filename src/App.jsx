@@ -1,30 +1,23 @@
-import {useEffect, useState} from "react";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import MainLayout from "./components/layouts/MainLayout.jsx";
+import MainPage from "./pages/MainPage.jsx";
+import CreateNewsPage from "./pages/CreateNewsPage.jsx";
+import DetailNewsPage from "./pages/DetailNewsPage.jsx";
 
 const App = () => {
-
-    const [news, setNews] = useState([])
-
-    useEffect(() => {
-        fetch('https://orozking.pythonanywhere.com/api/v1/news/').then(
-            res => res.json()
-        ).then(res => {
-            setNews(res.results)
-        })
-    }, [])
-
     return (
-        <div className='container py-5'>
-            <h1 className='text-center'>Hello world</h1>
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10">
-                {news.map(item =>
-                    <div className="card">
-                        <img src={item.image} alt="Your Image"/>
-                        <h2>{item.title}</h2>
-                        <p>{item.description}</p>
-                    </div>
-                )}
-            </div>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path='/' element={<MainLayout />}>
+                    <Route index element={<MainPage />} />
+                    <Route path='news/' element={<MainPage />} />
+                    <Route path='news/:id/' element={<DetailNewsPage />} />
+                    <Route path='create/' element={<CreateNewsPage />} />
+                </Route>
+                <Route path='*' element={<h2 className='text-center py-5'>404 PAGE NOT FOUND</h2>}/>
+            </Routes>
+        </BrowserRouter>
+
     )
 }
 
