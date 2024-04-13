@@ -40,3 +40,78 @@
     }
 }
 
+.modal_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+}
+
+.modal_wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    padding: 45px 30px;
+    border-radius: 20px;
+    z-index: 104;
+    max-height: 90vh;
+    overflow: auto;
+    transition: 0.3s;
+    width: 90%;
+}
+
+.modal_wrapper.sm {
+    max-width: 500px;
+    height: fit-content;
+}
+
+.modal_wrapper.lg {
+    max-width: 800px;
+    height: fit-content;
+}
+
+.primary-btn {
+    padding: 12px 18px;
+    border-radius: 12px;
+    background-color: #111;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.primary-btn:disabled {
+    cursor: no-drop;
+}
+
+.primary-input {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #111111;
+    width: 100%;
+    display: block;
+    transition: .25s;
+}
+
+.primary-input:focus {
+    outline: 4px solid rgba(0, 0, 0, .3);
+}
+
+.primary-select {
+    padding: 12px 18px;
+    border-radius: 12px;
+    border: 1px solid #111111;
+    width: 100%;
+    display: block;
+    transition: .25s;
+}
+
+.primary-select:focus {
+    outline: 4px solid rgba(0, 0, 0, .3);
+}

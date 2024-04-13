@@ -1,7 +1,7 @@
 import {useParams, useNavigate, Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import baseUrl from "../constance/baseUrl.js";
-import Loader from "../components/Loader.jsx";
+import Loader from "../components/ui/Loader.jsx";
 
 const DetailNewsPage = () => {
 

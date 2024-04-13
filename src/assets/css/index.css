@@ -68,12 +68,3 @@ h6 {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
-.primary-btn {
-  padding: 12px 18px;
-  border-radius: 12px;
-  background-color: #111;
-  color: #fff;
-  font-weight: 500;
-  cursor: pointer;
-}
