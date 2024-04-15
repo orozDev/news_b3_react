@@ -3,6 +3,7 @@ import MainLayout from "./components/layouts/MainLayout.jsx";
 import MainPage from "./pages/MainPage.jsx";
 import CreateNewsPage from "./pages/CreateNewsPage.jsx";
 import DetailNewsPage from "./pages/DetailNewsPage.jsx";
+import UpdateNewsPage from "./pages/UpdateNewsPage.jsx";
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
                     <Route index element={<MainPage />} />
                     <Route path='news/' element={<MainPage />} />
                     <Route path='news/:id/' element={<DetailNewsPage />} />
+                    <Route path='news/:id/update' element={<UpdateNewsPage />} />
                     <Route path='create/' element={<CreateNewsPage />} />
                 </Route>
                 <Route path='*' element={<h2 className='text-center py-5'>404 PAGE NOT FOUND</h2>}/>

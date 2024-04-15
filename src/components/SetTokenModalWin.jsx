@@ -9,6 +9,7 @@ const SetTokenModalWin = ({isOpen, setOpen}) => {
         const token = e.target.token.value
         localStorage.setItem('token', token)
         alert('Successfully set!')
+        setOpen(false)
     }
 
     return (
